@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Tech World - Computer Business</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color:pink;
+    }
+
+    header {
+      background-color: #003366;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+    nav {
+      background-color: #005599;
+      text-align: center;
+      padding: 10px 0;
+    }
+
+    nav a {
+      color: maroon;
+      text-decoration: none;
+      margin: 0 20px;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      color: yellow;
+    }
+
+    .section {
+      display: none;
+      padding: 20px;
+    }
+
+    .active {
+      display: block;
+    }
+
+    .products {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .product-card {
+      background-color: white;
+      padding: 15px;
+      width: 200px;
+      border-radius: 10px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+
+    .product-card img {
+      width: 100%;
+      height: 120px;
+      object-fit: cover;
+      border-radius: 8px;
+    }
+
+    footer {
+      background-color: #003366;
+      color: white;
+      text-align: center;
+      padding: 15px;
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+    }
+
+    form input, form textarea {
+      display: block;
+      width: 100%;
+      margin: 10px 0;
+      padding: 8px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    form button {
+      background-color: #005599;
+      color: white;
+      padding: 10px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    form button:hover {
+      background-color: #004080;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Tech World Company</h1>
+   
+  </header>
+
+  <nav>
+    <a href="#" onclick="showSection('home')">Home</a>
+    <a href="#" onclick="showSection('about')">About</a>
+    <a href="#" onclick="showSection('products')">Products</a>
+    <a href="#" onclick="showSection('contact')">Contact</a>
+  </nav>
+
+  <!-- Home Section -->
+  <div id="home" class="section active">
+    <h2>Home</h2>
+    <h3>Welcome to our company </h3>
+    <p>We specialize in high-quality smartphones, laptops, desktops, and accessories for both personal and business use. Explore our latest tech solutions at the best prices.</p>
+    <img src="hom.jpg" alt="Tech Store" style="width:100%; max-height:300px; object-fit:cover; border-radius:10px;">
+  </div>
+
+  <!-- About Section -->
+  <div id="about" class="section">
+    <h2>About Us</h2>
+    <p>Tech World is a leading computer business committed to providing top-notch technology and unmatched customer service. Founded in 2020, we’ve helped thousands of clients find the perfect devices for their needs.</p>
+    <img src="shop.jpg" alt="Team" style="width:100%; max-height:300px; object-fit:cover; border-radius:10px;">
+  </div>
+
+  <!-- Products Section -->
+  <div id="products" class="section">
+    <h2>Our Products</h2>
+    <div class="products">
+      <div class="product-card">
+        <img src="h.jpg" alt="Laptop">
+        <h4>HP EliteBook</h4>
+        <p>Powerful i7 business laptop</p>
+        <p><strong>$850</strong></p>
+      </div>
+      <div class="product-card">
+        <img src="s.jpg" alt="Smartphone">
+        <h4>Samsung Galaxy A14</h4>
+        <p>Mid-range Android smartphone</p>
+        <p><strong>$250</strong></p>
+      </div>
+      <div class="product-card">
+        <img src="d.jpg" alt="Desktop">
+        <h4>Dell Desktop</h4>
+        <p>Core i5 with 8GB RAM</p>
+        <p><strong>$600</strong></p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Contact Section -->
+  <div id="contact" class="section">
+    <h2>Contact Us</h2>
+    <form onsubmit="submitForm(); return false;">
+      <input type="text" placeholder="Your Name" required>
+      <input type="email" placeholder="Your Email" required>
+      <textarea placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </div>
+
+  <footer>
+    &copy; 2025 Tech World Company. All Rights Reserved.for more details contact us through:
+    <ul>
+          +225640876321
+          +225745677834
+    </ul>
+  </footer>
+
+  <script>
+    function showSection(id) {
+      const sections = document.querySelectorAll('.section');
+      sections.forEach(section => section.classList.remove('active'));
+      document.getElementById(id).classList.add('active');
+    }
+
+    function submitForm() {
+      alert("Message sent successfully!");
+    }
+  </script>
+</body>
+</html>
